@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html&gt;>
 <html lang="en" >
 
 <head>
@@ -37,6 +37,23 @@
         <header>
           Overview
         </header>
+
+        <article>
+          <p>
+            PHP is a powerful server side scripting language designed to allow you to write dynamically generated web pages. In practice, one of 
+            the most useful features of php is the simplicity of using its api to connect to a MYSQL database. By combing this functionality with 
+            javascript's XMLHttpRequest(), known commonly as <abbr title="Asynchronous Javascript and XML">AJAX</abbr>, to make call to your server 
+            side php script, dynamic web pages can be created with relative ease.
+          </p>
+
+          <p>
+            If you're wondering what the letters in PHP stand for, well according to the preface of the official php 
+            <a href="http://php.net/manual/en/preface.php">manual</a>, the acronym stands for "PHP: Hypertext Preprocessor". Now, if you're like me 
+            and you're wondering what the hell is the point of a so called "recursive acronym" that refers to itself in the definition, then you may 
+            be more content to know that when the language was originally written by <a href="https://en.wikipedia.org/wiki/Rasmus_Lerdorf">Rasmus 
+            Lerdorf</a> in 1994, its acronym stood for "Personal Home Page." 
+          </p>
+        </article>
         
         <article>  
       <p>JavaScript is a cross-platform, object-oriented scripting language. It is a small and lightweight language. Inside a host environment (for example, a web browser), JavaScript can be connected to the objects of its environment to provide programmatic control over them.</p>
@@ -54,6 +71,40 @@
             </pre>
       </artice>
         
+      </section>
+      
+      <section class="main-section" id="Connecting to MYSQL">
+        <header>
+          Connecting to MYSQL
+        </header>
+        <article>
+          <p>
+            Here's an example
+          </p>
+          <pre>
+            <code>
+              &lt;?php
+              /* mysqli([host], [username], [password], [db name], [port], [socket]) */
+              $conn = new mysqli("localhost", "root", "password", "database_name");
+              
+              if ($conn->connect_error) {
+                  die("Connection failed: " . $conn->connect_error);
+              }
+
+              $sql = "SELECT * FROM user WHERE username='$username' AND password='$password'";
+              $query = $conn->query($sql);
+            
+              if($query->num_rows>0){
+                $row=$query->fetch_array();
+                $userID=$row['userid'];
+                echo $userID;
+              }
+               
+              $conn->close();
+              ?&gt;
+            </code>
+          </pre>
+        </article>
       </section>
       <section class="main-section" id="Key_Features">
         <header>
