@@ -1,0 +1,183 @@
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <title> PHP Introduction </title>
+      <link rel="stylesheet" href="css/style.css">
+      <meta charset="UTF-8">
+    </head>
+    <body>
+      <nav class="navbar" id="navbar">
+        <header>PHP</header>
+        <ul>
+          <li><a class = "nav-link" href="#Overview">Overview</a></li>
+          <li><a class = "nav-link" href="#Basic_Syntax">Basic Syntax</a></li>
+          <li><a class = "nav-link" href="#Data_Types">Data Types</a></li>
+          <li><a class = "nav-link" href="#Functions">Functions</a></li>
+          <li><a class = "nav-link" href="#Classes">Classes</a></li>
+        </ul>
+      </nav>
+    <div class="container">
+    <div id="main-doc">
+      
+      <section class="main-section" id="Overview">
+        <header>
+          Overview
+        </header>
+        
+        <article>  
+      <p>PHP is a general use programming language that has been an integral part of web development since around the time of its creation in 1994.</p>
+
+<p>The Standard PHP Library (SPL) is a collection of interfaces and classes that are meant to solve common problems. Here are some of the ways it can be useful: </p>
+
+<li>Performing various operations on strings such as finding the length, substituting, and searching for substrings</li>
+<li>Working with Date and Time objects and formatting them</li>
+
+          <p>Let's get a basic feel for PHP's syntax and standard library with some code:</p>
+          <pre>
+            <code>function say_hello( $name, $date ) {
+              echo "Hello, " . $name . "\n";
+              echo "Today is " . $date;
+            }
+            
+            $date = date("D M d, Y G:i");
+            say_hello( 'World', $date );
+            </code>
+            </pre>
+
+          <p>Result: </p>
+          <pre>
+            <code>
+              Hello, World
+              Today is Fri May 10, 2019 4:00
+            </code>
+          </pre>
+            
+      </artice>
+        
+      </section>
+      <section class="main-section" id="Basic_Syntax">
+        <header>
+          Basic Syntax
+        </header>
+        
+        <article>
+          <p> PHP's syntax draws heavily from the C programming language and as such bears a strong resemblance to the syntax of other modern programming languages. </p>
+          <p> Declaring a variable for example follows a familiar pattern if you have some experience with other languages: </p>
+          <pre>
+            <code>
+              $foo = 2;
+              $bar = 2;
+              $baz = $foo + $bar;
+              echo "The variable \$baz = " . $baz;
+            </code>
+          </pre>
+
+          <p>Result: </p>
+          <pre>
+            <code>
+              The variable $baz = 4
+            </code>
+          </pre>
+
+          <p> Okay, you might be a little frustrated by these <i>echo</i> statements from the last two examples so here's a quick explanation: 
+            The <i>echo</i> is actually what is known as a language construct and we can pass parameters (i.e. $bar) to it and it will output them for us. 
+            The reason for the period ('.') between the two parameters is that we are concatenating, or combining, them into one argument which is passed to <i>echo</i>. 
+            We also use the backslash ('\') on <i>$bar</i> in the first parameter to tell php we want to output a literal ('$') symbol rather than retrieve the value of <i>$bar</i> inside our string. 
+            If we actual wanted to place <i>$bar</i>'s value inside the string that would be known as <i>string interpolation</i>.
+          </p>
+          
+          <p>And if that explanation made no sense to you please don't get too discouraged, this stuff takes a long time to get familiar with! </p>
+          
+        </article>
+        
+      </section>
+      <section class="main-section" id="Data_Types">
+        <header>
+          Data Types
+        </header>
+        
+        <article>
+          <p>PHP supports the following data types:</p>
+          <li>String</li> 
+          <li>Boolean</li>
+          <li>Integer</li>
+          <li>Float</li>
+          <li>Array</li>
+          <li>Object</li>          <li>Null</li>
+
+          <p>       If you're new to programming some of these data types like Arrays and objects may be unfamiliar to you. 
+            However you already know what ones like string, integer, and float are, at least in a basic sense. A string data type 
+            is basically just a collection of text (i.e. "Hello World"). Integer and float data types just hold whole numbers, and 
+            decimal numbers respectively. We'll go over some of the other data types in later sections.
+          </p>
+
+          <p>Let's go over an example where we use the string, boolean, and float data types together: </p>
+
+          <pre>
+            <code>
+              // Okay so for this example let's pretend we're making a program to generate a receipt for an ice cream purchase (it's summer here right now)
+
+              
+              $foo = 2;
+              $bar = 2;
+              $baz = $foo + $bar;
+              echo "The variable \$baz = " . $baz;
+            </code>
+          </pre>
+
+          <p>Result: </p>
+          <pre>
+            <code>
+              The variable $baz = 4
+            </code>
+          </pre>
+
+        </article>
+      </section>
+
+
+      <section class="main-section" id="Functions">
+        <header>
+          Functions
+        </header>
+        
+        <article>
+          To get started with writing JavaScript, open the Scratchpad and write your first "Hello world" JavaScript code:
+          <pre>
+            <code>function greetMe(yourName) {
+              alert("Hello " + yourName);
+            }
+            greetMe("World");</code>
+          </pre>
+  
+        </article>
+        
+        
+      </section>  
+      <section class="main-section" id="Classes">
+        <header>
+          Classes
+        </header>
+        
+        <article>
+          <pre>
+            <code>function greetMe(yourName) {
+              alert("Hello " + yourName);
+            }
+            greetMe("World");</code>
+          </pre>
+          
+          <pre>
+            <code>function greetMe(yourName) {
+              alert("Hello " + yourName);
+            }
+            greetMe("World");</code>
+          </pre>
+        </article>
+        
+      </section>  
+    </div>
+  </body>
+</html>
+  
+
