@@ -1,0 +1,61 @@
+<!-- wp:paragraph -->
+<p>PHP is a general use programming language that has been an integral part of web development since around the time of its creation in 1994.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The Standard PHP Library (SPL) is a collection of interfaces and classes that are meant to solve common problems. Here are some of the ways it can be useful:Performing various operations on strings such as finding the length, substituting, and searching for substringsWorking with Date and Time objects and formatting them</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Let's get a basic feel for PHP's syntax and standard library with some code:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:code -->
+<pre class="wp-block-code"><code> function say_hello( $name, $date ) {
+              echo "Hello, " . $name . "\n";
+              echo "Today is " . $date;
+            }
+            
+            $date = date("D M d, Y G:i");
+            say_hello( 'World', $date );</code></pre>
+<!-- /wp:code -->
+
+<!-- wp:paragraph -->
+<p>Result:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:code -->
+<pre class="wp-block-code"><code>Hello, World
+Today is Fri May 27, 2020 4:00</code></pre>
+<!-- /wp:code -->
+
+<!-- wp:paragraph -->
+<p>PHP's syntax draws heavily from the C programming language and as such bears a strong resemblance to the syntax of other modern programming languages.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Declaring a variable for example follows a familiar pattern if you have some experience with other languages:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:code -->
+<pre class="wp-block-code"><code>$foo = 2;
+$bar = 2;
+$baz = $foo + $bar;
+echo "The variable \$baz = " . $baz;</code></pre>
+<!-- /wp:code -->
+
+<!-- wp:paragraph -->
+<p>Result:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:code -->
+<pre class="wp-block-code"><code>The variable $baz = 4</code></pre>
+<!-- /wp:code -->
+
+<!-- wp:paragraph -->
+<p>Okay, you might be confused by these <em>echo</em> statements from the last two examples so here's a quick explanation: The <em>echo</em> is actually what is known as a language construct and we can pass arguments (i.e. $bar) to it and it will output them for us. The reason for the period ('.') between the two arguments is that we are concatenating, or combining, them into one argument which is passed to <em>echo</em>. We also use the backslash ('\') on <em>$bar</em> in the first part of our string to tell php we want to output a literal ('$') symbol rather than retrieve the actual value of <em>$bar</em> inside our string. In the second part of the string, we output <em>$bar</em>'s actual value which is known as <em>string interpolation</em>.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>These concepts may be confusing at first and can take a long time to get familiar with, but using <em>echo </em>will be an essential tool for quickly debugging php programs by verifying the values we have stored.</p>
+<!-- /wp:paragraph -->
